@@ -3,7 +3,7 @@ import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 
 // Constants
-const TWITTER_HANDLE = '_buildspace';
+const TWITTER_HANDLE = '@aar2dee21';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
@@ -30,6 +30,12 @@ const App = () => {
     }
   };
 
+  const connectWallet = async() => {};
+
+  const renderNotConnectedContainer = () => (
+    <button className="cta-button connect-wallet-button" onClick={connectWallet}>Connect to Wallet</button>
+  );
+
   useEffect(() => {
     const onLoad = async () => {
       await checkIfWalletIsConnected();
@@ -42,10 +48,12 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header">🖼 GIF Portal</p>
+          <p className="header">Starship Stan 🚀</p>
           <p className="sub-text">
-            View your GIF collection in the metaverse ✨
+            Answer some Star Wars trivia to mint a new starship name NFT ✨
           </p>
+          {/* Render your connect to wallet button right here */}
+          {renderNotConnectedContainer()}
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
@@ -54,7 +62,7 @@ const App = () => {
             href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
+          >{`built by @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
     </div>
