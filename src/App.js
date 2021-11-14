@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 
@@ -7,7 +7,7 @@ const TWITTER_HANDLE = '@aar2dee21';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
-
+  const [walletAddress, setWalletAddress] = useState(null);
   const checkIfWalletIsConnected = async () => {
     try {
       const { solana } = window;
@@ -21,6 +21,8 @@ const App = () => {
             'Connected with Public Key:', 
             response.publicKey.toString()
           );
+          setWalletAddress(response.publicKey.toString());
+
         }
       } else {
         alert("Solana object not found. Get a Phantom wallet.");
@@ -53,7 +55,7 @@ const App = () => {
             Answer some Star Wars trivia to mint a new starship name NFT ✨
           </p>
           {/* Render your connect to wallet button right here */}
-          {renderNotConnectedContainer()}
+          {!walletAddress && renderNotConnectedContainer()}
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
