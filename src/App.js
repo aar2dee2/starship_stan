@@ -72,7 +72,8 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header">Starship Stan 🚀</p>
+          <img src="rocket.png" alt="Starship-Stan-logo" height="150" width="150" />
+          <p className="header">Starship Stan</p>
           <p className="sub-text">
             Answer some Star Wars trivia to mint a new starship name NFT ✨
           </p>
@@ -80,6 +81,7 @@ const App = () => {
           {!walletAddress && renderNotConnectedContainer()}
         </div>
         <div className="footer-container">
+          <p className="footer-text">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a
             className="footer-text"
@@ -87,7 +89,13 @@ const App = () => {
             target="_blank"
             rel="noreferrer"
           >{`built by @${TWITTER_HANDLE}`}</a>
-        </div>
+          </p>
+           <p className="footer-text">
+          Icons made by 
+          <a className="footer-text" href="https://www.freepik.com" title="Freepik">Freepik</a>
+           from <a className="footer-text" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+           </p>
+           </div>
       </div>
     </div>
   );
