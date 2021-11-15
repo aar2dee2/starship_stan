@@ -3,7 +3,7 @@ import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 
 // Constants
-const TWITTER_HANDLE = '@aar2dee21';
+const TWITTER_HANDLE = 'aar2dee21';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const STARSHIP_IMAGES = [
   "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gq.com%2Fstory%2Fwhen-is-star-wars-going-to-kill-the-millennium-falcon&psig=AOvVaw0IsjQ2x_Qv4Ab8nOw1ryv_&ust=1637005470249000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMDdu97OmPQCFQAAAAAdAAAAABAN",
