@@ -14,7 +14,6 @@ const STARSHIP_IMAGES = [
   "https://www.denofgeek.com/wp-content/uploads/2019/09/battlestar-galactica-reboot.jpeg",
   "https://cdn.mos.cms.futurecdn.net/CFjbzhVTR7w7rjec4K8JL8-1024-80.jpg.webp",
   "https://cdnb.artstation.com/p/assets/images/images/018/786/631/large/hangar-b-productions-sa-43-7.jpg?1560729690",
-  "https://st.renderu.com/artwork/522578",
   "https://lumiere-a.akamaihd.net/v1/images/ISD-Gallery-1_a016bea1.jpeg",
   "https://lumiere-a.akamaihd.net/v1/images/e6d_ia_2581_47f64de7.jpeg?region=254%2C0%2C1426%2C802",
   "https://media.moddb.com/cache/images/mods/1/14/13461/thumb_620x2000/cis_munificent_0.jpg",
@@ -91,12 +90,15 @@ const App = () => {
           <p className="sub-text">
             Answer Star Wars trivia to mint a unique starship name NFT ✨
           </p>
+          <div>
           {/* Render your connect to wallet button right here */}
           {!walletAddress && renderNotConnectedContainer()}
           {/* Calling the function render images if wallet is connected */}
           {walletAddress && renderConnectedContainer()}
+          </div>
         </div>
-        <div className="footer-container">
+        {/* using footer tags here instead of div and removing className="footer-container" */}
+        <footer>
           <p className="footer-text">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a
@@ -111,7 +113,7 @@ const App = () => {
           <a className="footer-text" href="https://www.freepik.com" title="Freepik">Freepik</a>
            from <a className="footer-text" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
            </p>
-           </div>
+           </footer>
       </div>
     </div>
   );
