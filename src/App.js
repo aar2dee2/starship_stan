@@ -89,10 +89,12 @@ const App = () => {
           <img src="rocket.png" alt="Starship-Stan-logo" height="150" width="150" />
           <p className="header">Starship Stan</p>
           <p className="sub-text">
-            Answer some Star Wars trivia to mint a new starship name NFT ✨
+            Answer Star Wars trivia to mint a unique starship name NFT ✨
           </p>
           {/* Render your connect to wallet button right here */}
           {!walletAddress && renderNotConnectedContainer()}
+          {/* Calling the function render images if wallet is connected */}
+          {walletAddress && renderConnectedContainer()}
         </div>
         <div className="footer-container">
           <p className="footer-text">
