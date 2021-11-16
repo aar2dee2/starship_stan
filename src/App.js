@@ -60,6 +60,20 @@ const App = () => {
     <button className="cta-button connect-wallet-button" onClick={connectWallet}>Connect to Wallet</button>
   );
 
+  const renderConnectedContainer = () => (
+    <div className="connected-container">
+      <div className="ship-grid">
+        {STARSHIP_IMAGES.map(
+          ship => (
+            <div className="ship-item" key={ship}>
+              <img src={ship} alt={ship} />
+            </div>
+          )
+        )}
+      </div>
+    </div>
+  );
+
   useEffect(() => {
     const onLoad = async () => {
       await checkIfWalletIsConnected();
