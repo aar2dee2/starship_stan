@@ -61,6 +61,12 @@ const App = () => {
 
   const renderConnectedContainer = () => (
     <div className="connected-container">
+      {/* Adding a form to accept user input and a button to submit*/}
+      <form onSubmit={(event) => {
+        event.preventDefault();
+      }}>
+        <input type="button" placeholders="Enter" />
+      </form>
       <div className="ship-grid">
         {STARSHIP_IMAGES.map(
           ship => (
